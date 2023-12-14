@@ -6,6 +6,13 @@ const currentYear = new Date().getFullYear();
 const birthMonth = ref<number | undefined>(undefined);
 const birthDay = ref<number | undefined>(undefined);
 const birthYear = ref<number | undefined>(undefined);
+
+const birthDate = computed(() => {
+   if ([birthMonth, birthDay, birthYear].some(({ value }) => value === undefined))
+      return undefined;
+
+   return new Date(birthYear.value!, birthMonth.value!, birthDay.value!);
+});
 </script>
 
 <template>
