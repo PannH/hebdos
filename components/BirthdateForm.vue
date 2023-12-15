@@ -24,11 +24,11 @@ function handleAnyInput(): void {
 
 <template>
    <form class="flex justify-center items-center gap-2 mt-10">
-      <span class="text-2xl mr-2">🗓️</span>
+      <span class="text-2xl mr-2 max-md:text-xl">🗓️</span>
       <select 
          v-model="birthMonth"
          @input="handleAnyInput()"
-         class="select select-bordered focus:select-primary placeholder:text-gray-500"
+         class="select select-bordered focus:select-primary placeholder:text-gray-500 max-md:select-sm"
          placeholder="Month"
       >
          <option disabled selected value="undefined">Month</option>
@@ -49,7 +49,7 @@ function handleAnyInput(): void {
          v-model="birthDay"
          @input="handleAnyInput()"
          type="number"
-         class="input input-bordered focus:input-primary placeholder:text-gray-500"
+         class="input input-bordered focus:input-primary placeholder:text-gray-500 max-md:input-sm"
          min="1"
          max="31"
          placeholder="Day"
@@ -58,7 +58,7 @@ function handleAnyInput(): void {
          v-model="birthYear"
          @input="handleAnyInput()"
          type="number"
-         class="input input-bordered focus:input-primary placeholder:text-gray-500"
+         class="input input-bordered focus:input-primary placeholder:text-gray-500 max-md:input-sm"
          :min="currentYear - constants.MAX_AGE_YEARS"
          :max="currentYear"
          placeholder="Year"
