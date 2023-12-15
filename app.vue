@@ -19,4 +19,5 @@ function handleBirthDateUpdate(birthDate: Date): void {
    <div class="container mx-auto mt-16">
       <WeeksChart :lived-weeks="livedWeeks" :age="age" />
    </div>
+   <Footer />
 </template>
