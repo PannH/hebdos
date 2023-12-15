@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useSeoMeta({
+   title: 'Hebdos | How many weeks have you been living for?',
+   description: 'Discover how many weeks you have been living for and how many weeks you have left to live.'
+});
+
 const livedWeeks = ref<number | undefined>(undefined);
 const age = ref<number | undefined>(undefined);
 
